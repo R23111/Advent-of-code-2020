@@ -23,10 +23,4 @@ for i in range(len(file)):
         valid_passwords_part2 += 1
 
 f.close()
-
-# valid_passwords = 0
-
-# for p in passwords:
-
-
 print(f"part 1: {valid_passwords_part1} \npart 2: {valid_passwords_part2}")
