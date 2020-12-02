@@ -21,9 +21,8 @@ for i in range(len(file)):
     if repetitions >= int(p[0]) and repetitions <= int(p[1]):
         valid_passwords_part1 += 1
 
-    # part 2: check if the letter is on (only) one of the indeces -1 (the array starts at 1 -> p[0] - 1 and p[1] - 1)
-    if((p[3][int(p[0]) - 1] == p[2] and not p[3][int(p[1]) - 1] == p[2]) or
-       (p[3][int(p[1]) - 1] == p[2] and not p[3][int(p[0]) - 1] == p[2])):
+    # part 2: check if the letter is on (only) one of the indeces -1 (XOR operation)
+    if(bool(p[3][int(p[0]) - 1] == p[2]) ^ bool(p[3][int(p[1]) - 1] == p[2])):
         valid_passwords_part2 += 1
 
 f.close()
