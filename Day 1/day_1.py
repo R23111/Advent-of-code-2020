@@ -1,12 +1,11 @@
 f = open("./input.txt", 'r')
-
 temp = f.readlines()
+f.close()
+
 report = []
 
 for i in range(len(temp)):
     report.append(int(temp[i].replace("\n", '')))
-
-f.close()
 
 for i in range(len(report)):
     for j in range(i+1, len(report)):
