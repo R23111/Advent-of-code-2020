@@ -12,7 +12,7 @@ int main()
     string l;
     vector<int> report;
 
-    //while there is a new line with a stringm push it (as a int) to 'report'
+    //while there is a new line with a string push it (as a int) to 'report'
     while (getline(f, l))
     {
         report.push_back(stoi(l));
